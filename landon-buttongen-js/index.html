@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Button</title>
+  </head>
+  <body>
+    <button id="addButton">Add Item</button>
+
+    <script>
+      const addButton = document.getElementById("addButton");
+
+      function addItem() {
+        let newButton = document.createElement("button");
+        let newItem = prompt("Enter Product Name Below");
+        if (newItem != null) {
+          newButton.textContent = newItem;
+          newButton.id = newItem;
+          document.body.appendChild(newButton);
+        }
+      }
+
+      addButton.addEventListener("click", addItem);
+    </script>
+  </body>
+</html>
